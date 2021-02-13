@@ -1,0 +1,59 @@
+~/react_flask_planets
+❯ pwd
+/home/jamesm/react_flask_planets
+
+* Initialize front end / back end directories
+
+npx create-react-app client
+
+mkdir api
+
+* Create and Activate Virtual Environment
+
+python3 -m venv venv
+
+source venv/bin/activate
+
+* Deactivate Virtual Environment
+
+deactivate
+
+* Install python modules
+
+pip install flask python-dotenv
+
+* Initialize Flask app
+
+touch api.py
+
+* Flask imports the application from the place indicated by the FLASK_APP environment variable. 
+To avoid having to manually set this variable every time, create e a .flaskenv file, which Flask automatically 
+imports into the environment on startup if it finds the python-dotenv package installed.
+
+touch .flaskenv
+
+* At this point this basic Flask project is complete. To make sure that it is working well you can start it
+
+flask run
+
+* React Proxy Configuration
+
+* The React project can be configured to redirect any requests it receives on its port 3000 that it does not understand into another server. 
+* This is configured simply by adding a proxy key at the bottom package.json:
+
+/client/package.json
+
+"proxy": "http://localhost:5000"
+
+"start_api": "cd api && venv/bin/flask run --no-debugger",
+
+* Adding the Flask Project to Git
+
+touch .gitignore
+
+touch api/.gitignore
+
+git init
+
+git remote add origin git@github.com:Mister905/react_flask_planets.git
+
