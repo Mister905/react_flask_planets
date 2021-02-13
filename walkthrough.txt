@@ -79,3 +79,13 @@ yarn start
 
 ~/react_flask_planets/client
 yarn add react-router-dom
+
+* pip freeze and install
+
+* You can freeze requirements on one machine and then later on a different machine or on a clean environment 
+* You'll get the an identical environment with the exact same dependencies installed as you had in the original 
+* environment where you generated the frozen-requirements.txt
+
+pip freeze > frozen-requirements.txt
+
+pip install -r frozen-requirements.txt
