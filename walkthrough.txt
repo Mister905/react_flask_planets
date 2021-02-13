@@ -45,7 +45,7 @@ flask run
 
 "proxy": "http://localhost:5000"
 
-"start_api": "cd api && venv/bin/flask run --no-debugger",
+"start_api": "cd ../api && venv/bin/flask run --no-debugger",
 
 * Adding the Flask Project to Git
 
@@ -57,3 +57,25 @@ git init
 
 git remote add origin git@github.com:Mister905/react_flask_planets.git
 
+git add .
+
+git commit -m "Inialized project"
+
+git branch -M main
+
+git push -u origin main
+
+* Running the Combined Project
+
+cd client
+
+* Start Front End
+
+yarn start
+
+* Start Back End
+
+* Install React-Router
+
+~/react_flask_planets/client
+yarn add react-router-dom
