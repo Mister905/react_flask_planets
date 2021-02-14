@@ -107,3 +107,20 @@ yarn --version
 
 yarn install
 
+
+* SQLAlchemy
+
+* SQLite - file-nased db system (no server required)
+
+* SQLAlchemy is an object-relational mapper (ORM)
+
+* Works with Python objects - no knowledge of SQL is required
+
+pip install flask-sqlalchemy
+
+* Define and Run Flask CLI Commands
+
+~/react_flask_planets/api main*
+venv ❯ flask db_create
+
+pip install flask-marshmallow
