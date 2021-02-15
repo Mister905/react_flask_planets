@@ -19,6 +19,7 @@ source venv/bin/activate
 deactivate
 
 * Install python modules
+* If python-dotenv is installed, running the flask command will set environment variables defined in the files .env and .flaskenv
 
 pip install flask python-dotenv
 
@@ -124,3 +125,11 @@ pip install flask-sqlalchemy
 venv ❯ flask db_create
 
 pip install flask-marshmallow
+
+* Flask JWT Extended
+
+pip install flask-jwt-extended
+
+* Setting up email and lost password*
+
+pip install Flask-Mail
