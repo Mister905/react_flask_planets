@@ -232,7 +232,7 @@ def hello_world():
     return jsonify(message="Hello from React Flask Planets"), 200
 
 
-@app.route("/time")
+@app.route("/api/time")
 def get_current_time():
     return {"time": time.time()}
 

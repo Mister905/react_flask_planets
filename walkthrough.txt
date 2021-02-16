@@ -2,11 +2,13 @@
 ❯ pwd
 /home/jamesm/react_flask_planets
 
+
 * Initialize front end / back end directories
 
 npx create-react-app client
 
 mkdir api
+
 
 * Create and Activate Virtual Environment
 
@@ -14,18 +16,22 @@ python3 -m venv venv
 
 source venv/bin/activate
 
+
 * Deactivate Virtual Environment
 
 deactivate
+
 
 * Install python modules
 * If python-dotenv is installed, running the flask command will set environment variables defined in the files .env and .flaskenv
 
 pip install flask python-dotenv
 
+
 * Initialize Flask app
 
 touch api.py
+
 
 * Flask imports the application from the place indicated by the FLASK_APP environment variable. 
 To avoid having to manually set this variable every time, create e a .flaskenv file, which Flask automatically 
@@ -36,9 +42,11 @@ touch .flaskenv
 FLASK_APP=api.py
 FLASK_ENV=development
 
+
 * At this point this basic Flask project is complete. To make sure that it is working well you can start it
 
 flask run
+
 
 * React Proxy Configuration
 
@@ -69,6 +77,7 @@ git branch -M main
 
 git push -u origin main
 
+
 * Running the Combined Project
 
 cd client
@@ -79,10 +88,8 @@ yarn start
 
 * Start Back End
 
-* Install React-Router
+yarn start_api
 
-~/react_flask_planets/client
-yarn add react-router-dom
 
 * pip freeze and install
 
@@ -93,6 +100,7 @@ yarn add react-router-dom
 pip freeze > frozen-requirements.txt
 
 pip install -r frozen-requirements.txt
+
 
 * Cloning repo and initializing repo
 
@@ -119,12 +127,14 @@ yarn install
 
 pip install flask-sqlalchemy
 
+
 * Define and Run Flask CLI Commands
 
-~/react_flask_planets/api main*
+~/react_flask_planets/api
 venv ❯ flask db_create
 
 pip install flask-marshmallow
+
 
 * Flask JWT Extended
 
@@ -133,3 +143,58 @@ pip install flask-jwt-extended
 * Setting up email and lost password*
 
 pip install Flask-Mail
+
+
+* Client packages
+
+yarn add axios react-router-dom redux react-redux redux-thunk formik dayjs node-sass
+
+
+* Client Folder Structure
+
+~/react_flask_planets/client/src
+venv ❯ rm App.css App.test.js index.css logo.svg reportWebVitals.js setupTests.js
+
+~/react_flask_planets/client/src 
+venv ❯ mkdir actions assets components reducers
+
+
+* Configure Sass
+
+~/react_flask_planets/client/src 
+venv ❯ touch index.scss
+
+
+* Configure reducer index
+
+~/react_flask_planets/client/src/reducers
+venv ❯ touch index.js
+
+
+* Configure action types
+
+~/react_flask_planets/client/src/actions
+venv ❯ touch types.js test.js
+
+
+* Create Components and Routes
+
+~/react_flask_planets/client/src
+❯ mkdir ./components/test
+
+~/react_flask_planets/client/src
+❯ touch ./components/test/Test.js
+
+~/react_flask_planets/client/src
+❯ touch ./components/test/Test.scss
+
+
+* ES7 React/Redux/GraphQL/React-Native snippets
+
+* Create functional arrow component
+rafce tab
+
+
+* Enable Emmet support for JSX in Visual Studio Code | React
+
+https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-react-f1f5dfe8809c
